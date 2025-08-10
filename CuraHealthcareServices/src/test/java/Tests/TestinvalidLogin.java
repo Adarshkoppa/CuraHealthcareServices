@@ -13,7 +13,7 @@ public class TestinvalidLogin extends Basetest {
 		p.clickAppointment();
 		p.getUserName("John Doe");
 		p.getUserPassword("ThisIsAPassword");
-		p.getLogin();
+		p.clickLogin();
 		try {Thread.sleep(2000);}
 		catch (Exception e) 
 		{e.printStackTrace();}

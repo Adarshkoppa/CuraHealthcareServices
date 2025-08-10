@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class PomHome {
 	WebDriver driver;
 	@FindBy(xpath = "//a[.='Make Appointment']")
-	private WebElement appointment;
+	public WebElement appointment;
 	
 	@FindBy(id  = "txt-username")
 	private WebElement userName;
@@ -20,7 +20,7 @@ public class PomHome {
 	private WebElement userPassword;
 	
 	@FindBy(xpath = "//select[@id='combo_facility']")
-	private WebElement facility;
+	public WebElement facility;
 	
 	@FindBy(xpath = "//input[@id='chk_hospotal_readmission']")
 	private WebElement hospitalReadmission;
@@ -52,6 +52,9 @@ public class PomHome {
 	@FindBy(xpath = "//p[.='Login failed! Please ensure the username and password are valid.']")
 	private WebElement errorMessage;
 	
+	@FindBy(xpath = "//h1[.='CURA Healthcare Service']")
+	private WebElement logo;
+	
 	public PomHome(WebDriver driver)
 	{
 		this.driver=driver;
@@ -70,7 +73,7 @@ public class PomHome {
 	{
 		userPassword.sendKeys(pwd);
 	}
-	public void getLogin()
+	public void clickLogin()
 	{
 		login.click();
 	}
@@ -119,5 +122,11 @@ public class PomHome {
 	{
 		return errorMessage;
 	}
+	public WebElement getLogo()
+	{
+		return logo;
+	}
+	
+	
 	
 }

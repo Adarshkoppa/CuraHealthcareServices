@@ -16,7 +16,7 @@ public class TestBookAppointment extends Basetest {
 		p1.clickAppointment();
 		p1.getUserName("John Doe");
 		p1.getUserPassword("ThisIsNotAPassword");
-		p1.getLogin();
+		p1.clickLogin();
 
 		Select faciltyDDM = new Select(p1.getFacility()); 
 		faciltyDDM.selectByVisibleText("Hongkong CURA Healthcare Center");

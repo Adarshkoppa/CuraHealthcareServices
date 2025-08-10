@@ -23,7 +23,7 @@ public void testValidLogin()
 	{
 		e.printStackTrace();
 	}
-	p.getLogin();
+	p.clickLogin();
 
 	String title = driver.getTitle();
 	System.out.println(title);
